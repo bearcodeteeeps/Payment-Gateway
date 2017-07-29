@@ -14,7 +14,7 @@ class PaymentGatewayServiceProvider extends ServiceProvider
 	public function boot()
 	{ 
 		$this->publishes([
-			__DIR__.'/../config' => base_path('/config/'),
+			__DIR__.'/../laravel-integrated-config' => base_path('/config/'),
 		]);
 	}
 
