@@ -19,7 +19,7 @@ class PaymentGatewayServiceProvider extends ServiceProvider
 		$this->loadMigrationsFrom(__DIR__.'/../laravel-integrated-migration');
 	}
 
-	    /**
+	/**
 	* Register the application services.
 	*
 	* @return void
