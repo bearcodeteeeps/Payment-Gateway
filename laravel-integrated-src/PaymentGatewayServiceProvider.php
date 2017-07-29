@@ -16,6 +16,7 @@ class PaymentGatewayServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__.'/../laravel-integrated-config' => base_path('/config/'),
 		]);
+		$this->loadMigrationsFrom(__DIR__.'/../laravel-integrated-migration');
 	}
 
 	    /**
