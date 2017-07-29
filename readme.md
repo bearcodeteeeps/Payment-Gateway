@@ -2,6 +2,26 @@
 GoUrl.io Cryptocoin Payment Gateway API
 -----------------------------------------
 
+#
+
+### Laravel Integrate
+#### installing
+```
+composer require lloricode/payment-gateway
+```
+#### Config
+```
+// provider
+Lloricode\PaymentGateway\PaymentGatewayServiceProvider::class,
+// facade
+'PaymentGateway'=>Lloricode\PaymentGateway\PaymentGatewayFacade::class,
+```
+#### Public config
+```
+php artisan vendor:publish  --provider="Lloricode\PaymentGateway\PaymentGatewayServiceProvider"
+```
+#
+
 Version 1.8
 
 **Accept Bitcoin, Litecoin, Paycoin, Dogecoin, Dash, Speedcoin, Reddcoin, Potcoin, Feathercoin, Vertcoin, Vericoin, Peercoin, MonetaryUnit, Swiscoin Payments Online on your website**
