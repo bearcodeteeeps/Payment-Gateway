@@ -20,6 +20,22 @@ Lloricode\PaymentGateway\PaymentGatewayServiceProvider::class,
 ```
 php artisan vendor:publish  --provider="Lloricode\PaymentGateway\PaymentGatewayServiceProvider"
 ```
+
+#### Uase in laravel
+```php
+//run migration to include table from this library
+php artisan migrate
+
+use PaymentGateway;
+use Cryptobox;
+
+// require api
+PaymentGateway::requireApi();
+
+// require api callback
+PaymentGateway::requireApiCallback();
+```
+
 #
 
 Version 1.8
