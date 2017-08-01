@@ -142,7 +142,10 @@ if (isset($_POST["status"]) && in_array($_POST["status"], array("payment_receive
 	 *  You need to modify file - cryptobox.newpayment.php
 	 *  Read more - https://gourl.io/api-php.html#ipn
          */
-
+	if(function_exists('response_transaction_payment_gateway'))
+	{
+		response_transaction_payment_gateway($_POST);
+	}
 	if (in_array($box_status, array("cryptobox_newrecord", "cryptobox_updated")) && function_exists('cryptobox_new_payment')) cryptobox_new_payment($paymentID, $_POST, $box_status);
 }   
 
