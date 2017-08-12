@@ -7,7 +7,9 @@ GoUrl.io Cryptocoin Payment Gateway API
 ### Laravel Integrate
 #### installing
 ```
-composer require lloricode/payment-gateway
+"require": {
+      "lloricode/payment-gateway": "dev-laravel-package",
+},
 ```
 #### Config
 ```
