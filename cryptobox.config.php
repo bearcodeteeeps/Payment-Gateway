@@ -7,7 +7,7 @@
  *
  */
 
-$config = require_once __DIR__.'/laravel-integrated-config/cryptobox.config.php';
+ $config = Config::get('cryptobox_config');
 
  define("DB_HOST", 	$config['host']);				// hostname
  define("DB_USER", 	$config['user']);		// database username
