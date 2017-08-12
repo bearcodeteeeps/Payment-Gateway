@@ -14,9 +14,9 @@ class PaymentGatewayServiceProvider extends ServiceProvider
 	public function boot()
 	{ 
 		$this->publishes([
-			__DIR__.'/../laravel-integrated-config' => base_path('/config/'),
+			__DIR__.'/config' => base_path('/config/'),
 		]);
-		$this->loadMigrationsFrom(__DIR__.'/../laravel-integrated-migration');
+		$this->loadMigrationsFrom(__DIR__.'/migration');
 	}
 
 	/**
@@ -26,6 +26,10 @@ class PaymentGatewayServiceProvider extends ServiceProvider
 	*/
 	public function register()
 	{
+		$this->mergeConfigFrom(
+			__DIR__.'/config/cryptobox_config.php' ,'cryptobox_config'
+		);
+
 		$this->app->singleton('lloricodepaymentGateway', function ($app) {
  			return new IntegrateSource;
  		});
